@@ -28,7 +28,6 @@ def main():
         screen.blit(bg_img2, [-x+4800, 0])
 
         key_lst = pg.key.get_pressed()
-
         if key_lst[pg.K_UP]:
             pos = (-1, -1)
         elif key_lst[pg.K_DOWN]:
@@ -36,13 +35,11 @@ def main():
         elif key_lst[pg.K_LEFT]:
             pos = (-2, 0)
         elif key_lst[pg.K_RIGHT]:
-            pos =(1, 0)
+            pos = (1, 0)
         else:
             pos = (-1, 0)
-
         kk_rct.move_ip(pos)
-        
-        
+
         screen.blit(kk_img, kk_rct)  #kk_rctの設定に従って貼り付け
         pg.display.update()
         tmr += 1
