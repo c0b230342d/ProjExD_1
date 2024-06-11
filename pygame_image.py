@@ -35,8 +35,9 @@ def main():
         elif key_lst[pg.K_LEFT]:
             kk_rct.move_ip((-1, 0))
         elif key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+            kk_rct.move_ip((2, 0))
 
+        kk_rct.move_ip(-1, 0)
         screen.blit(kk_img, kk_rct)  #kk_rctの設定に従って貼り付け
         pg.display.update()
         tmr += 1
