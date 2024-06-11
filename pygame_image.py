@@ -16,13 +16,16 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
-        screen.blit(bg_img, [0, 0])
+        
+        x = tmr % 800
+        screen.blit(bg_img, [-x, 0])
         kk_rct = kk_img.get_rect()  #こうかとんのRectを抽出
         kk_rct.center = 300, 200
         screen.blit(kk_img, kk_rct)  #kk_rctの設定に従って貼り付け
         pg.display.update()
-        tmr += 1        
+        tmr += 1
+        # if tmr > 800:
+        #     tmr = 0        
         clock.tick(200)
 
 
