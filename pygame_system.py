@@ -7,11 +7,11 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     pg.display.set_caption("はじめてのPygame")
-    screen = pg.display.set_mode((800, 600))
+    screen = pg.display.set_mode((800, 800))
     clock = pg.time.Clock()
     font = pg.font.Font(None, 80)
 
-    enn = pg.Surface((20, 20))
+    enn = pg.Surface((20, 20)) #円
     pg.draw.circle(enn, (255, 0, 0), (10, 10), 10)
     enn.set_colorkey((0, 0, 0))
 
